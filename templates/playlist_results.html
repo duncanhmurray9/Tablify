@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Tabs From Your Playlist
+{% endblock %}
+
+{% block main %}
+<div class="">
+ 
+        <div class="">
+            <h1>{{ playlist_name }} Tab Results</h1>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Album</th>
+                    <th>  </th>
+                    <th>Tab Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in results['items'] %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ item['track']['name'] }}</td>
+                    <td>{{ item['track']['artists'][0]['name'] }}</td>
+                    <td>{{ item['track']['album']['name'] }}</td>
+                    <td>{{ ((item['track']['duration_ms']/(1000*60))|int % 60) ~ ':' ~ '%02d'%((item['track']['duration_ms']/1000) % 60)|int }}</td>
+                    <td><a class="nav-link" href='{{ search_goog[loop.index0] }}' target="_blank">Open</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+ 
+</div>
+{% endblock %}

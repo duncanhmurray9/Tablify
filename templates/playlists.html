@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Playlists
+{% endblock %}
+
+{% block main %}
+<div class="">
+        <div class="">
+            <h1>Your Spotify Playlists</h1>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Playlist Name</th>
+                    <th>Modify Playlist in Spotify</th>
+                    <th>Get Tabs from Playlist</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in results['items'] %}
+                <tr>
+                    <td>{{ item['name'] }}</td>
+                    <td><a class="nav-link" href={{ item['external_urls']['spotify'] }} target="_blank">Open Playlist in Spotify</td>
+                    <form action="/playlist_results" method="post"><td><button type="submit" class="btn btn-danger spotify_button" name="{{ item['name'] }}" style="" value="{{ item['id'] }}"><h4><i class="fab fa-spotify"></i>Open</h4></button></td></form>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</div>
+{% endblock %}

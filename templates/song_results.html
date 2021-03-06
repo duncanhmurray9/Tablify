@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Tabs From Your Top Songs
+{% endblock %}
+
+{% block main %}
+<div class="">
+
+        <div class="">
+            <h1>Your Top Songs</h1>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Album</th>
+                    <th> </th>
+                    <th>Tab Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in results['items'] %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ item['name'] }}</td>
+                    <td>{{ item['artists'][0]['name'] }}</td>
+                    <td>{{ item['album']['name'] }}</td>
+                    <td>{{ ((item['duration_ms']/(1000*60))|int % 60) ~ ':' ~ '%02d'%((item['duration_ms']/1000) % 60)|int }}</td>
+                    <td><a class="nav-link" href='{{ search_goog[loop.index0] }}' target="_blank">Open</td>
+                    <!--
+                    <td><a class="nav-link" href={{ item['external_urls']['spotify'] }} target="_blank">Open Playlist in Spotify</td>
+                    <td><button type="submit" class="btn btn-danger spotify_button" id="" style=""><h4><i class="fab fa-spotify"></i>Open</h4></button></td>
+                    -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+ 
+</div>
+{% endblock %}

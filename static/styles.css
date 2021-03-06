@@ -1,0 +1,74 @@
+nav .navbar-brand
+{
+    /* size for top left title*/
+    font-size: xx-large;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+    
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+main table {
+    text-align: left;
+}
+
+main tfoot {
+    font-weight: bold;
+}
+
+.title {
+    letter-spacing: 1.92px;
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+.fronttext {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+/*.background {
+    background: url(static/images/background.jpg);
+    background-size: cover;
+    background-position-y: center;
+    background-position: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    color: #fff;
+    overflow: hidden;
+}*/
+
+footer {
+
+    place-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    background: rgba(36, 37, 36, 0.3);
+    padding-bottom: 100px;
+}

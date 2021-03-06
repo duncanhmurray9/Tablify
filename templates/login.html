@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+<!--Need to figure out how to put the background stylings in the css file -->
+<div class="background" style="background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(static/images/background.jpg); background-size: cover; min-height: 800px; ">
+    <h1 class = title>Tablify</h1>
+    <p class = fronttext>Can't decide what song to learn?</p>
+    <p class = fronttext>Let Tablify show you the available tabs for your top played songs or playlists.</p>
+    <form action="/" method="post">
+        <button class="btn btn-primary" type="submit">Log in with Spotify</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+__pycache__/
+.cache
+.google-cookie
+*.json
+workspace.code-workspace
+instance/
+.webassets-cache

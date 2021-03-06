@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Get Your Playlists
+{% endblock %}
+
+{% block main %}
+    <div class="">
+            <div class="">
+                <br>
+                <br>
+                <br>
+                <br>
+                <center>
+                    <form action="/playlists" method="post">
+                        <button type="submit" class="btn btn-danger spotify_button" id="" style=""><h4><i class="fab fa-spotify"></i>Get Your Spotify Playlists</h4></button>
+                    </form>
+                    <br>
+                    <br>
+                    <form action="/song_results" method="get">
+                        <button type="submit" class="btn btn-danger spotify_button" id="" style=""><h4><i class="fab fa-spotify"></i>Get Your Top Songs</h4></button>
+                    </form>     
+                </center>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+    </div>
+    <!-- 
+    <form action="/results" method="post">
+        <button class="btn btn-primary" type="submit">GET TOP PLAYED SONGS</button>
+    </form>
+    -->
+{% endblock %}
