@@ -3,3 +3,4 @@ googlesearch-python
 Flask
 Flask-Session
 Werkzeug
+gunicorn
