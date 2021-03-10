@@ -1,4 +1,5 @@
 spotipy
-googlesearch
-flask
-werkzeug
+googlesearch-python
+Flask
+Flask-Session
+Werkzeug
