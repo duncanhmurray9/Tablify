@@ -36,7 +36,7 @@ Session(app)
 # Spotify API info
 CLIENT_ID = os.environ.get('CLIENT_ID')
 CLIENT_SECRET = os.environ.get('CLIENT_SECRET')
-REDIRECT_URI = 'http://127.0.0.1:5000/api_callback'
+REDIRECT_URI = 'https://tablify-tabs.herokuapp.com/api_callback'
 API_BASE = 'https://accounts.spotify.com'
 SCOPE = 'playlist-modify-private, playlist-modify-public, user-top-read, user-library-read'
 
