@@ -7,9 +7,10 @@
 
 {% block main %}
 <div class="">
-        <div class="">
-            <h1>Your Spotify Playlists</h1>
-
+    <div class="">
+        <br>
+        <h1>Your Spotify Playlists</h1>
+        <br>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -23,10 +24,10 @@
                 <tr>
                     <td>{{ item['name'] }}</td>
                     <td><a class="nav-link" href={{ item['external_urls']['spotify'] }} target="_blank">Open Playlist in Spotify</td>
-                    <form action="/playlist_results" method="post"><td><button type="submit" class="btn btn-danger spotify_button" name="{{ item['name'] }}" style="" value="{{ item['id'] }}"><h4><i class="fab fa-spotify"></i>Open</h4></button></td></form>
+                    <form action="/playlist_results" method="post"><td><button type="submit" class="btn button" name="{{ item['name'] }}" style="" value="{{ item['id'] }}"><h4><i class="fab fa-spotify"></i>Open</h4></button></td></form>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-</div>
+    </div>
 {% endblock %}

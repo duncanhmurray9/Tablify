@@ -5,31 +5,19 @@
 {% endblock %}
 
 {% block main %}
-    <div class="">
-            <div class="">
-                <br>
-                <br>
-                <br>
-                <br>
-                <center>
-                    <form action="/playlists" method="post">
-                        <button type="submit" class="btn btn-danger spotify_button" id="" style=""><h4><i class="fab fa-spotify"></i>Get Your Spotify Playlists</h4></button>
-                    </form>
-                    <br>
-                    <br>
-                    <form action="/song_results" method="get">
-                        <button type="submit" class="btn btn-danger spotify_button" id="" style=""><h4><i class="fab fa-spotify"></i>Get Your Top Songs</h4></button>
-                    </form>     
-                </center>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
+    <div class="center-index">
+        <center>
+            <form action="/playlists" method="post">
+                <button type="submit" class="btn button" id="" style=""><h4><i class="fab fa-spotify"></i>Get Your Spotify Playlists</h4></button>
+            </form>
+            <br>
+            <br>
+            <form action="/song_results" method="get">
+                <button type="submit" class="btn button" id="" style=""><h4><i class="fab fa-spotify"></i>Get Your Top Songs</h4></button>
+            </form>     
+        </center>
+        <br>
+        <br>
+        <p> NOTE: Loading the tab links will take ~1 minute as Google does not like repeated searches in a short time span, so please be patient.
     </div>
-    <!-- 
-    <form action="/results" method="post">
-        <button class="btn btn-primary" type="submit">GET TOP PLAYED SONGS</button>
-    </form>
-    -->
 {% endblock %}

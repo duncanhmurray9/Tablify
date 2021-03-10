@@ -29,6 +29,13 @@ main img
     max-width: 100%;
 }
 
+.p-5 {
+    padding: 0px !important;
+}
+
+.container {
+    max-width: 1900px;
+}
 main table {
     text-align: left;
 }
@@ -38,14 +45,37 @@ main tfoot {
 }
 
 .title {
-    letter-spacing: 1.92px;
+    letter-spacing: 3.00px;
     font-weight: 700;
     font-size: 5rem;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    outline: none;
+    padding: 15px 32px;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+}
+
+.button:active {
+    background-color: #4CAF50;
 }
 
 .fronttext {
     font-size: 1.5em;
     font-weight: bold;
+}
+
+.center {
+    padding: 250px 0;
+}
+
+.center-index {
+    padding: 355px 0;
 }
 /*.background {
     background: url(static/images/background.jpg);
@@ -70,5 +100,5 @@ footer {
     box-sizing: border-box;
     display: flex;
     background: rgba(36, 37, 36, 0.3);
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
