@@ -36,7 +36,7 @@ Session(app)
 # Spotify API info
 CLIENT_ID = os.environ.get('CLIENT_ID')
 CLIENT_SECRET = os.environ.get('CLIENT_SECRET')
-REDIRECT_URI = 'https://tablify-tabs.herokuapp.com/api_callback'
+REDIRECT_URI = 'http://127.0.0.1:5000/api_callback'
 API_BASE = 'https://accounts.spotify.com'
 SCOPE = 'playlist-modify-private, playlist-modify-public, user-top-read, user-library-read'
 
@@ -134,7 +134,7 @@ def playlist_results():
     playlist_id = list(playlist_id)
     playlist_id = playlist_id[0][0]
 
-    results = sp.playlist_tracks(playlist_id, fields=None, limit=50, offset=0)
+    results = sp.playlist_tracks(playlist_id, fields=None, limit=40, offset=0)
 
     title = []
     artist = []
@@ -153,7 +153,7 @@ def playlist_results():
 
         search_results.append(google_search)
         search_goog.append(search_results[i][0])
-        if i == 49:
+        if i == 39:
             break
 
         print(google_search)
@@ -166,7 +166,7 @@ def song_results():
     """Display Song Results"""
 
     sp = spotipy.Spotify(auth=session.get('token_info').get('access_token'))
-    results = sp.current_user_top_tracks(limit=100, offset=0, time_range="long_term")
+    results = sp.current_user_top_tracks(limit=40, offset=0, time_range="long_term")
 
     title = []
     artist = []
@@ -185,6 +185,8 @@ def song_results():
 
         search_results.append(google_search)
         search_goog.append(search_results[i][0])
+        if i == 39:
+            break
         print(google_search)
 
     return render_template("song_results.html", results=results, search_goog=search_goog)
