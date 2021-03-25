@@ -1,6 +1,6 @@
 # Tablify
 
-#### Video demonstration of Tablify here: YOUTUBE LINK
+#### Video demonstration of Tablify here: https://www.youtube.com/watch?v=cz4qECW01aE
 
 ## Description
 
